@@ -1,5 +1,8 @@
 import { product as crownSummit } from './products/marquis-crown-summit.js'
 
+const cdn = (path) => `https://cdn.myshoptet.com/usr/www.swimspa.cz/user/shop/detail/${path}`
+const src = (slug) => `https://www.swimspa.cz${slug}`
+
 export const virivkyHub = {
   hero: {
     eyebrow: 'VÍŘIVKY',
@@ -13,25 +16,39 @@ export const virivkyHub = {
   typesIntro: {
     eyebrow: 'DRUHY VÍŘIVEK',
     headline: 'Vířivka pro každý prostor i příležitost.',
-    text: 'Vířivky se liší kapacitou, tvarem i typem konstrukce — pomůžeme vám vybrat tu, která bude sedět vaší terase i způsobu využití.',
+    text: 'Vířivky se liší kapacitou, tvarem i typem konstrukce — klikněte na kategorii a prohlédněte si konkrétní modely.',
   },
 
   types: [
     {
-      title: 'Kapacita 2 až 7+ osob',
-      text: 'Od romantických modelů pro dva, přes rodinné varianty pro 4–5 osob, až po velké vířivky pro 6 a více lidí.',
+      title: 'Kapacita 4–5 osob',
+      text: 'Rodinné vířivky pro běžné využití — dostatek místa bez zbytečně velkých rozměrů.',
+      image: cdn('4150_spa-relax-new-1.png'),
+      href: '/virivky/kapacita-4-5/',
     },
     {
-      title: 'Kulaté, obdélníkové i rohové',
-      text: 'Tvar volíme podle dispozice terasy nebo zahrady — rohové a atypické tvary šetří místo, obdélníkové nabízí nejvíc sedacích pozic.',
+      title: 'Kapacita 6 a více osob',
+      text: 'Velké vířivky pro rodinu i společenské večery s přáteli.',
+      image: cdn('4144-1_spa-recharge-new-1.png'),
+      href: '/virivky/kapacita-6-plus/',
     },
     {
-      title: 'S lounery i bez',
-      text: 'Polohovací lehátka (loungery) přidávají prostor k natažení v poloze vleže, klasické sezení maximalizuje kapacitu.',
+      title: 'Kulaté vířivky',
+      text: 'Symetrický tvar ideální pro rovnoměrné rozložení hydromasážních trysek.',
+      image: cdn('4312-2_wave3-02.jpg'),
+      href: '/virivky/kulate/',
     },
     {
-      title: 'Klasické i nafukovací',
-      text: 'Pevná konstrukce pro celoroční provoz, nebo praktická nafukovací vířivka pro sezónní použití a snadné skladování.',
+      title: 'S lounery (2 a více)',
+      text: 'Polohovací lehátka pro pohodlné natažení vleže během hydromasáže.',
+      image: cdn('4207_spa-serene-2-new-1.png'),
+      href: '/virivky/lounery/',
+    },
+    {
+      title: 'Nafukovací vířivky',
+      text: 'Praktická sezónní varianta — snadná instalace i skladování.',
+      image: cdn('527_nafukovaci-viriva-vana-netspa-silver.png'),
+      href: '/virivky/nafukovaci/',
     },
   ],
 
@@ -51,6 +68,72 @@ export const virivkyHub = {
       image: '/assets/products/crown-summit/summit-beauty.jpg',
       imageAlt: 'Marquis Crown Summit — vířivka pro 7 osob v exteriéru',
       href: '/virivky/marquis-crown-summit/',
+    },
+    {
+      name: 'Passion Spas Bliss',
+      tagline: 'Kompaktní vířivka pro každodenní relaxaci',
+      price: 95900,
+      currency: 'Kč',
+      brand: 'Passion Spas',
+      image: cdn('4165_spa-bliss-new-1.png'),
+      imageAlt: 'Passion Spas Bliss',
+      href: src('/virivky/viriva-vana-passion-spas-bliss/'),
+      external: true,
+    },
+    {
+      name: 'Passion Spas Renew',
+      tagline: 'Vířivka s vyváženou hydromasáží',
+      price: 104900,
+      currency: 'Kč',
+      brand: 'Passion Spas',
+      image: cdn('4153-2_spa-renew-new-1.png'),
+      imageAlt: 'Passion Spas Renew',
+      href: src('/virivky/renew/'),
+      external: true,
+    },
+    {
+      name: 'Hanscraft OKA Wave 3',
+      tagline: 'Kulatá vířivka s designovým opláštěním',
+      price: 142848,
+      currency: 'Kč',
+      brand: 'Hanscraft',
+      image: cdn('4312-2_wave3-02.jpg'),
+      imageAlt: 'Hanscraft OKA Wave 3',
+      href: src('/virivky/virivka-oka-wave-3/'),
+      external: true,
+    },
+    {
+      name: 'Hanscraft HC8',
+      tagline: 'Prostorná kulatá vířivka pro více osob',
+      price: 214078,
+      currency: 'Kč',
+      brand: 'Hanscraft',
+      image: cdn('4255-7_hanscraft-hc8.jpg'),
+      imageAlt: 'Hanscraft HC8',
+      href: src('/virivky/virivka-hc-design-hc8/'),
+      external: true,
+    },
+    {
+      name: 'Passion Spas Reflect',
+      tagline: 'Rodinná vířivka pro 6 a více osob',
+      price: 125000,
+      currency: 'Kč',
+      brand: 'Passion Spas',
+      image: cdn('5976_spa-reflect-new-1.png'),
+      imageAlt: 'Passion Spas Reflect',
+      href: src('/virivky/passion-spas-reflect/'),
+      external: true,
+    },
+    {
+      name: 'NetSpa Montana 4',
+      tagline: 'Nafukovací vířivka pro sezónní použití',
+      price: 9121,
+      currency: 'Kč',
+      brand: 'NetSpa',
+      image: cdn('1475_nafukovaci-viriva-vana-netspa-montana-4.jpg'),
+      imageAlt: 'NetSpa Montana 4',
+      href: src('/nafukovaci-virivky-netspa/nafukovaci-viriva-vana-netspa-montana-4/'),
+      external: true,
     },
   ],
 

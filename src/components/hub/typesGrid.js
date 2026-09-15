@@ -4,10 +4,16 @@ export function renderTypesGrid(hub) {
   const cards = hub.types
     .map(
       (t) => `
-      <div class="type-card" data-reveal>
-        <h3 class="type-card-title">${t.title}</h3>
-        <p class="type-card-text">${t.text}</p>
-      </div>
+      <a class="type-card" href="${t.href}" data-reveal>
+        <div class="type-card-media">
+          <img src="${t.image}" alt="${t.title}" loading="lazy" />
+        </div>
+        <div class="type-card-body">
+          <h3 class="type-card-title">${t.title}</h3>
+          <p class="type-card-text">${t.text}</p>
+          <span class="type-card-cta">Zobrazit modely →</span>
+        </div>
+      </a>
     `
     )
     .join('')

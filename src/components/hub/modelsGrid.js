@@ -4,15 +4,18 @@ export function renderModelsGrid(hub) {
   const cards = hub.models
     .map(
       (m) => `
-      <a class="model-card" href="${m.href}" data-reveal>
-        <div class="model-card-media">
+      <a class="model-card" href="${m.href}" data-reveal${
+        m.external ? ' target="_blank" rel="noopener"' : ''
+      }>
+        <div class="model-card-media${m.external ? ' model-card-media--contain' : ''}">
           <img src="${m.image}" alt="${m.imageAlt}" loading="lazy" />
+          ${m.brand ? `<span class="model-card-brand">${m.brand}</span>` : ''}
         </div>
         <div class="model-card-content">
           <h3 class="model-card-name">${m.name}</h3>
           <p class="model-card-tagline">${m.tagline}</p>
           <div class="model-card-price">od ${formatPrice(m.price, m.currency)}</div>
-          <span class="model-card-cta">Zobrazit detail →</span>
+          <span class="model-card-cta">${m.external ? 'Zobrazit na SwimSpa.cz ↗' : 'Zobrazit detail →'}</span>
         </div>
       </a>
     `

@@ -1315,13 +1315,32 @@ p {
   transform: translateY(-4px);
 }
 .model-card-media {
+  position: relative;
   aspect-ratio: 4 / 3;
   overflow: hidden;
+  background: var(--bg);
 }
 .model-card-media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.model-card-media--contain img {
+  object-fit: contain;
+  padding: 16px;
+}
+.model-card-brand {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 4px 10px;
+  border-radius: 100px;
 }
 .model-card-content {
   padding: 24px;
@@ -1827,26 +1846,87 @@ p {
 /* Hub type taxonomy grid */
 .types-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1px;
-  background: var(--border);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-l);
-  overflow: hidden;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: clamp(14px, 1.6vw, 20px);
 }
 .type-card {
+  display: flex;
+  flex-direction: column;
   background: var(--bg-white);
-  padding: clamp(24px, 2.6vw, 32px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-m);
+  overflow: hidden;
+  color: var(--text);
+  transition: box-shadow 0.3s var(--ease), transform 0.3s var(--ease);
+}
+.type-card:hover {
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px);
+}
+.type-card-media {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--bg);
+}
+.type-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 14px;
+  transition: transform 0.5s var(--ease);
+}
+.type-card:hover .type-card-media img {
+  transform: scale(1.04);
+}
+.type-card-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 .type-card-title {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 .type-card-text {
-  font-size: 14px;
-  line-height: 1.6;
+  font-size: 13px;
+  line-height: 1.55;
   color: var(--text-secondary);
+  margin-bottom: 16px;
+  flex: 1;
+}
+.type-card-cta {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+/* Breadcrumb (subcategory pages) */
+.breadcrumb {
+  padding-top: calc(84px + 28px);
+  padding-bottom: 8px;
+  background: var(--bg-white);
+}
+.breadcrumb-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+}
+.breadcrumb-inner a {
+  color: var(--text-secondary);
+}
+.breadcrumb-inner a:hover {
+  color: var(--text);
+}
+.breadcrumb-sep {
+  color: var(--border);
+}
+.breadcrumb-current {
+  color: var(--text);
+  font-weight: 600;
 }
 
 .models-note {
