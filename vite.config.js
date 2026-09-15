@@ -9,8 +9,11 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {
       input: {
-        main: resolve(__dirname, 'src/index.html'),
-        crownSummit: resolve(__dirname, 'src/crown-summit.html'),
+        home: resolve(__dirname, 'src/index.html'),
+        swimSpaHub: resolve(__dirname, 'src/swim-spa/index.html'),
+        swimSpa580: resolve(__dirname, 'src/swim-spa/swim-spa-580/index.html'),
+        virivkyHub: resolve(__dirname, 'src/virivky/index.html'),
+        crownSummit: resolve(__dirname, 'src/virivky/marquis-crown-summit/index.html'),
       },
     },
   },

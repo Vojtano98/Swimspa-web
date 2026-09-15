@@ -11,8 +11,8 @@ export function renderFooter() {
           <div class="footer-cols">
             <div class="footer-col">
               <div class="footer-col-title">Nabídka</div>
-              <a href="#">Swim Spa</a>
-              <a href="#">Vířivky</a>
+              <a href="/swim-spa/">Swim Spa</a>
+              <a href="/virivky/">Vířivky</a>
               <a href="#">Realizace</a>
             </div>
             <div class="footer-col">

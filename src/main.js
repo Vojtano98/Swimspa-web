@@ -1,4 +1,4 @@
-import { product } from './data/products/swimspa-580.js'
-import { renderProductPage } from './renderProductPage.js'
+import { home } from './data/home.js'
+import { renderHomePage } from './renderHomePage.js'
 
-renderProductPage(product)
+renderHomePage(home)

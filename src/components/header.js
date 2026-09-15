@@ -5,8 +5,8 @@ export function renderHeader() {
         <a href="/" class="site-logo">SWIMSPA</a>
         <nav>
           <ul class="site-nav" id="site-nav">
-            <li><a href="/" data-nav-link>Swim Spa</a></li>
-            <li><a href="/crown-summit.html" data-nav-link>Vířivky</a></li>
+            <li><a href="/swim-spa/" data-nav-link>Swim Spa</a></li>
+            <li><a href="/virivky/" data-nav-link>Vířivky</a></li>
             <li><a href="#" data-nav-link>Realizace</a></li>
             <li><a href="#technologie" data-nav-link>Technologie</a></li>
             <li><a href="#" data-nav-link>O nás</a></li>
