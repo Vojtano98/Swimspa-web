@@ -1565,3 +1565,258 @@ p {
   .mobile-cta { display: flex; }
   body { padding-bottom: 76px; }
 }
+
+/* Advantages split (Swim Spa vs Vířivky) */
+.advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(20px, 2.5vw, 32px);
+}
+.advantage-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-l);
+  overflow: hidden;
+  background: var(--bg-white);
+}
+.advantage-card-media {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+.advantage-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.advantage-card-body {
+  padding: clamp(24px, 3vw, 36px);
+}
+.advantage-card-title {
+  font-size: clamp(22px, 2.2vw, 28px);
+  margin-bottom: 14px;
+}
+.advantage-card-body .body-l {
+  margin-bottom: 20px;
+}
+.advantage-card-points {
+  list-style: none;
+  margin: 0 0 28px;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+.advantage-card-points li {
+  position: relative;
+  padding-left: 24px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--text);
+}
+.advantage-card-points li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+@media (max-width: 900px) {
+  .advantages-grid { grid-template-columns: 1fr; }
+}
+
+/* Savings chart (heat pump) */
+.savings-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(32px, 5vw, 80px);
+  align-items: center;
+}
+.savings-layout .body-l {
+  margin: 20px 0 32px;
+}
+.savings-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.savings-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border-dark);
+}
+.savings-stat-value {
+  font-size: clamp(22px, 2.4vw, 30px);
+  font-weight: 700;
+  color: var(--accent);
+}
+.savings-stat-label {
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--dark-text-secondary);
+}
+.savings-chart {
+  background: rgba(244, 242, 238, 0.04);
+  border: 1px solid var(--border-dark);
+  border-radius: var(--radius-l);
+  padding: clamp(24px, 3vw, 36px);
+}
+.savings-bars {
+  display: grid;
+  gap: 28px;
+}
+.savings-bar-row {
+  display: grid;
+  gap: 10px;
+}
+.savings-bar-labels {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+.savings-bar-label {
+  font-size: 15px;
+  font-weight: 600;
+}
+.savings-bar-sublabel {
+  font-size: 13px;
+  color: var(--dark-text-secondary);
+}
+.savings-bar-track {
+  height: 22px;
+  border-radius: 11px;
+  background: rgba(244, 242, 238, 0.08);
+  overflow: hidden;
+}
+.savings-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 1s var(--ease);
+}
+.savings-bar-fill--muted {
+  background: rgba(244, 242, 238, 0.22);
+}
+.savings-bar-fill--accent {
+  background: var(--accent);
+}
+.savings-bar-value {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--dark-text);
+}
+.savings-note {
+  margin-top: 24px;
+  font-size: 12px;
+  color: var(--dark-text-secondary);
+}
+@media (max-width: 900px) {
+  .savings-layout { grid-template-columns: 1fr; }
+  .savings-stats { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 520px) {
+  .savings-stats { grid-template-columns: 1fr; }
+}
+
+/* Showroom section */
+.showroom-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(32px, 5vw, 80px);
+  align-items: center;
+}
+.showroom-media {
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-l);
+  overflow: hidden;
+}
+.showroom-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.showroom-layout .body-l {
+  margin: 20px 0 24px;
+}
+.showroom-points {
+  list-style: none;
+  margin: 0 0 32px;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+.showroom-points li {
+  position: relative;
+  padding-left: 24px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+.showroom-points li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+@media (max-width: 900px) {
+  .showroom-layout { grid-template-columns: 1fr; }
+  .showroom-media { order: -1; }
+}
+
+/* Blog section */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: clamp(16px, 2vw, 24px);
+}
+.blog-card {
+  display: block;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-l);
+  overflow: hidden;
+  background: var(--bg-white);
+  color: var(--text);
+  transition: box-shadow 0.3s var(--ease), transform 0.3s var(--ease);
+}
+.blog-card:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  transform: translateY(-4px);
+}
+.blog-card-media {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+.blog-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.blog-card-body {
+  padding: 24px;
+}
+.blog-card-title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+.blog-card-excerpt {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+.blog-card-cta {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--accent);
+}
+.blog-more {
+  margin-top: 40px;
+  text-align: center;
+}
