@@ -79,6 +79,9 @@ button {
 .section--white {
   background: var(--bg-white);
 }
+.section--tint {
+  background: var(--bg);
+}
 
 .eyebrow {
   display: block;
@@ -1819,4 +1822,37 @@ p {
 .blog-more {
   margin-top: 40px;
   text-align: center;
+}
+
+/* Hub type taxonomy grid */
+.types-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-l);
+  overflow: hidden;
+}
+.type-card {
+  background: var(--bg-white);
+  padding: clamp(24px, 2.6vw, 32px);
+}
+.type-card-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.type-card-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.models-note {
+  margin-top: 32px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  max-width: 60ch;
 }

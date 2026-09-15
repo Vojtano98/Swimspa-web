@@ -28,6 +28,7 @@ export function renderModelsGrid(hub) {
           <p class="body-l">${hub.intro.text}</p>
         </div>
         <div class="models-grid">${cards}</div>
+        ${hub.intro.note ? `<p class="models-note" data-reveal>${hub.intro.note}</p>` : ''}
       </div>
     </section>
   `

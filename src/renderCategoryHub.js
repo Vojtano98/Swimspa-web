@@ -1,5 +1,6 @@
 import { renderHeader, bindHeader } from './components/header.js'
 import { renderHeroHome, bindHeroHome } from './components/home/heroHome.js'
+import { renderTypesGrid } from './components/hub/typesGrid.js'
 import { renderModelsGrid } from './components/hub/modelsGrid.js'
 import { renderFinalCtaHome } from './components/home/finalCtaHome.js'
 import { renderFooter } from './components/footer.js'
@@ -13,6 +14,7 @@ export function renderCategoryHub(hub) {
   app.innerHTML = [
     renderHeader(),
     renderHeroHome(hub),
+    renderTypesGrid(hub),
     renderModelsGrid(hub),
     renderFinalCtaHome(hub),
     renderFooter(),

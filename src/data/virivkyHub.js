@@ -10,10 +10,36 @@ export const virivkyHub = {
     imageAlt: 'Marquis Crown Summit — vířivka pro 7 osob v exteriéru',
   },
 
+  typesIntro: {
+    eyebrow: 'DRUHY VÍŘIVEK',
+    headline: 'Vířivka pro každý prostor i příležitost.',
+    text: 'Vířivky se liší kapacitou, tvarem i typem konstrukce — pomůžeme vám vybrat tu, která bude sedět vaší terase i způsobu využití.',
+  },
+
+  types: [
+    {
+      title: 'Kapacita 2 až 7+ osob',
+      text: 'Od romantických modelů pro dva, přes rodinné varianty pro 4–5 osob, až po velké vířivky pro 6 a více lidí.',
+    },
+    {
+      title: 'Kulaté, obdélníkové i rohové',
+      text: 'Tvar volíme podle dispozice terasy nebo zahrady — rohové a atypické tvary šetří místo, obdélníkové nabízí nejvíc sedacích pozic.',
+    },
+    {
+      title: 'S lounery i bez',
+      text: 'Polohovací lehátka (loungery) přidávají prostor k natažení v poloze vleže, klasické sezení maximalizuje kapacitu.',
+    },
+    {
+      title: 'Klasické i nafukovací',
+      text: 'Pevná konstrukce pro celoroční provoz, nebo praktická nafukovací vířivka pro sezónní použití a snadné skladování.',
+    },
+  ],
+
   intro: {
     eyebrow: 'NAŠE MODELY',
     headline: 'Vyberte si svou vířivku.',
     text: 'Od kompaktních modelů pro dvojici až po velké vířivky pro celou rodinu a přátele — vždy s hydromasáží na míru vašim potřebám.',
+    note: 'Vybíráme pro vás z širší nabídky značek Marquis Spas, Passion Spas, Poséidon Spa a HANSCRAFT — pro další modely a varianty nás kontaktujte, rádi poradíme s výběrem.',
   },
 
   models: [
