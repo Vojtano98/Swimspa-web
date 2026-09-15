@@ -1,6 +1,8 @@
 import { renderHeader, bindHeader } from './components/header.js'
 import { renderBreadcrumb } from './components/breadcrumb.js'
 import { renderModelsGrid } from './components/hub/modelsGrid.js'
+import { renderSavingsSection } from './components/home/savingsChart.js'
+import { renderShowroomSection } from './components/home/showroomSection.js'
 import { renderFinalCtaHome } from './components/home/finalCtaHome.js'
 import { renderFooter } from './components/footer.js'
 import { bindInquiryModal } from './components/inquiryModal.js'
@@ -14,6 +16,8 @@ export function renderSubcategoryPage(sub) {
     renderHeader(),
     renderBreadcrumb(sub.breadcrumb),
     renderModelsGrid(sub),
+    renderSavingsSection(sub),
+    renderShowroomSection(sub),
     renderFinalCtaHome(sub),
     renderFooter(),
   ].join('')

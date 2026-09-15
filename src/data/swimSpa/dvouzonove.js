@@ -1,3 +1,6 @@
+import { savings } from '../shared/savings.js'
+import { showroom } from '../shared/showroom.js'
+
 const cdn = (path) => `https://cdn.myshoptet.com/usr/www.swimspa.cz/user/shop/detail/${path}`
 const src = (slug) => `https://www.swimspa.cz${slug}`
 
@@ -51,10 +54,14 @@ export const dvouzonove = {
     },
   ],
 
+  savings,
+
+  showroom,
+
   finalCta: {
     headline: 'Nenašli jste svůj model?',
     text: 'Dvouzónová swim spa nabízíme v mnoha velikostech a výbavách — poradíme s výběrem podle rozpočtu i prostoru.',
-    primaryCta: { label: 'Zpět na Swim Spa', href: '/swim-spa/' },
+    primaryCta: { label: 'Nezávazná poptávka', inquiry: true },
     secondaryCta: { label: 'Prohlédnout vířivky', href: '/virivky/' },
     note: 'Odpovídáme do 24 hodin. Nezávazná konzultace zdarma.',
   },

@@ -1,5 +1,9 @@
 // Homepage content — single source of truth, no markup here.
 
+import { savings } from './shared/savings.js'
+import { showroom } from './shared/showroom.js'
+import { blog } from './shared/blog.js'
+
 const img = (id, w = 1600) =>
   `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&q=80`
 
@@ -76,78 +80,11 @@ export const home = {
     ],
   },
 
-  savings: {
-    eyebrow: 'ÚSPORA ENERGIE',
-    headline: 'Tepelné čerpadlo sníží náklady na ohřev až o polovinu.',
-    text: 'Standardní elektrická topná patrona ohřívá vodu s účinností COP 1 — z 1 kWh elektřiny získáte 1 kWh tepla. Tepelné čerpadlo dokáže i při mrazu -10 °C dosáhnout COP 1,95–2,8, tedy 2–3× více tepla ze stejné spotřeby.',
-    bars: [
-      {
-        label: 'Standardní elektrický ohřev',
-        sublabel: 'COP 1,0',
-        value: 100,
-        display: '100 %',
-        tone: 'muted',
-      },
-      {
-        label: 'Ohřev tepelným čerpadlem',
-        sublabel: 'COP 1,95–2,8',
-        value: 50,
-        display: 'až −50 %',
-        tone: 'accent',
-      },
-    ],
-    stats: [
-      { value: '50 %+', label: 'nižší náklady na ohřev vody' },
-      { value: '1–2 roky', label: 'návratnost investice' },
-      { value: '45 860 Kč', label: 'pořizovací cena bez DPH (od)' },
-    ],
-    note: 'Vlastní ověřená data COP a nákladů na ohřev, zdroj: blog SwimSpa.cz.',
-  },
+  savings,
 
-  showroom: {
-    eyebrow: 'NAVŠTIVTE NÁS',
-    headline: 'Než si vyberete, vyzkoušejte si to na vlastní kůži.',
-    text: 'V našem showroomu vás osobně provedeme nabídkou swim spa i vířivek, předvedeme technologie a hydromasážní zóny naživo a společně vybereme řešení, které bude nejlépe sedět vaší zahradě i rozpočtu.',
-    points: [
-      'Osobní prohlídka s odborným poradcem',
-      'Vyzkoušíte si hydromasáž přímo v provozu',
-      'Poradíme s umístěním, technikou i financováním',
-    ],
-    image: '/assets/products/crown-summit/control-app.jpg',
-    imageAlt: 'Konzultace a ukázka ovládání vířivky v showroomu',
-    cta: { label: 'Domluvit prohlídku showroomu', href: '#kontakt' },
-  },
+  showroom,
 
-  blog: {
-    eyebrow: 'RÁDCE A INSPIRACE',
-    headline: 'Ze světa swim spa a vířivek',
-    text: 'Přečtěte si více o technologiích, instalaci i tom, jak se rozhodnout mezi swim spa a klasickým bazénem.',
-    posts: [
-      {
-        title: 'Swim spa vs. klasický bazén — jak zvolit ideální řešení',
-        excerpt: 'Kompaktní celoroční provoz a hydromasáž, nebo prostor pro rodinu a volné plavání? Porovnáváme obě varianty.',
-        image: 'https://cdn.myshoptet.com/usr/www.swimspa.cz/user/documents/upload/PXL_20250716_084545338.jpg',
-        imageAlt: 'Porovnání swim spa a klasického bazénu',
-        href: 'https://www.swimspa.cz/blog/swim-spa-vs--klasicky-bazen--jak-zvolit-idealni-reseni-pro-relaxaci-i-aktivni-pohyb/',
-      },
-      {
-        title: 'Polozapuštěné swim spa — instalace s minimálními výkopy',
-        excerpt: 'Praktický kompromis mezi nadzemní a plně zapuštěnou instalací — snadný přístup i jednodušší údržba.',
-        image: 'https://cdn.myshoptet.com/usr/www.swimspa.cz/user/documents/upload/Allseas Spa/semi-inground-installation-1.jpg',
-        imageAlt: 'Polozapuštěná instalace swim spa',
-        href: 'https://www.swimspa.cz/blog/www-swimspa-cz-blog-polozapustene-swim-spa-/',
-      },
-      {
-        title: 'TwinTherapy Seat™ — luxusní inovace od Passion Spas',
-        excerpt: 'Dvojité křeslo pro synchronizovanou hydromasáž dvou osob najednou — novinka v modelech Passion Spas.',
-        image: 'https://cdn.myshoptet.com/usr/www.swimspa.cz/user/documents/upload/PassionSpas/TwinTherapy seat.jpg',
-        imageAlt: 'TwinTherapy Seat dvojité křeslo pro hydromasáž',
-        href: 'https://www.swimspa.cz/blog/twintherapy-seat----luxusni-inovace-od-passion-spas/',
-      },
-    ],
-    moreHref: 'https://www.swimspa.cz/blog/',
-    moreLabel: 'Zobrazit všechny články',
-  },
+  blog,
 
   why: {
     eyebrow: 'PROČ SWIMSPA.CZ',

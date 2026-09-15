@@ -1,3 +1,6 @@
+import { savings } from '../shared/savings.js'
+import { showroom } from '../shared/showroom.js'
+
 const cdn = (path) => `https://cdn.myshoptet.com/usr/www.swimspa.cz/user/shop/detail/${path}`
 const src = (slug) => `https://www.swimspa.cz${slug}`
 
@@ -40,10 +43,14 @@ export const kulate = {
     },
   ],
 
+  savings,
+
+  showroom,
+
   finalCta: {
     headline: 'Nenašli jste svůj model?',
     text: 'Kulaté vířivky nabízíme v různých velikostech i výbavách — poradíme s výběrem podle rozpočtu i prostoru.',
-    primaryCta: { label: 'Zpět na vířivky', href: '/virivky/' },
+    primaryCta: { label: 'Nezávazná poptávka', inquiry: true },
     secondaryCta: { label: 'Prohlédnout Swim Spa', href: '/swim-spa/' },
     note: 'Odpovídáme do 24 hodin. Nezávazná konzultace zdarma.',
   },

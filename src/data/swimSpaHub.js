@@ -1,4 +1,7 @@
 import { product as swimSpa580 } from './products/swimspa-580.js'
+import { savings } from './shared/savings.js'
+import { showroom } from './shared/showroom.js'
+import { blog } from './shared/blog.js'
 
 const cdn = (path) => `https://cdn.myshoptet.com/usr/www.swimspa.cz/user/shop/detail/${path}`
 const src = (slug) => `https://www.swimspa.cz${slug}`
@@ -137,10 +140,16 @@ export const swimSpaHub = {
     },
   ],
 
+  savings,
+
+  showroom,
+
+  blog,
+
   finalCta: {
     headline: 'Kolik bude stát vaše Swim Spa?',
     text: 'Připravíme vám nabídku včetně dopravy, instalace a doporučeného příslušenství.',
-    primaryCta: { label: 'Zobrazit Swim Spa 580', href: '/swim-spa/swim-spa-580/' },
+    primaryCta: { label: 'Nezávazná poptávka', inquiry: true },
     secondaryCta: { label: 'Prohlédnout vířivky', href: '/virivky/' },
     note: 'Odpovídáme do 24 hodin. Nezávazná konzultace zdarma.',
   },

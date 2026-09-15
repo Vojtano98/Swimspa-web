@@ -1,4 +1,7 @@
 import { product as crownSummit } from './products/marquis-crown-summit.js'
+import { savings } from './shared/savings.js'
+import { showroom } from './shared/showroom.js'
+import { blog } from './shared/blog.js'
 
 const cdn = (path) => `https://cdn.myshoptet.com/usr/www.swimspa.cz/user/shop/detail/${path}`
 const src = (slug) => `https://www.swimspa.cz${slug}`
@@ -137,10 +140,16 @@ export const virivkyHub = {
     },
   ],
 
+  savings,
+
+  showroom,
+
+  blog,
+
   finalCta: {
     headline: 'Kolik bude stát vaše vířivka?',
     text: 'Připravíme vám nabídku včetně dopravy, instalace a doporučeného příslušenství.',
-    primaryCta: { label: 'Zobrazit Crown Summit', href: '/virivky/marquis-crown-summit/' },
+    primaryCta: { label: 'Nezávazná poptávka', inquiry: true },
     secondaryCta: { label: 'Prohlédnout Swim Spa', href: '/swim-spa/' },
     note: 'Odpovídáme do 24 hodin. Nezávazná konzultace zdarma.',
   },
