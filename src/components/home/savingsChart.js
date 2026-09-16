@@ -13,7 +13,8 @@ export function renderSavingsSection(home) {
         <div class="savings-bar-track">
           <div
             class="savings-bar-fill savings-bar-fill--${b.tone}"
-            style="width: ${(b.value / maxValue) * 100}%"
+            style="width: 0%"
+            data-target-width="${(b.value / maxValue) * 100}"
             title="${b.label}: ${b.display}"
           ></div>
         </div>
@@ -26,7 +27,7 @@ export function renderSavingsSection(home) {
   const stats = s.stats
     .map(
       (st) => `
-      <div class="savings-stat">
+      <div class="savings-stat" data-reveal="scale">
         <span class="savings-stat-value">${st.value}</span>
         <span class="savings-stat-label">${st.label}</span>
       </div>
@@ -46,7 +47,7 @@ export function renderSavingsSection(home) {
           </div>
         </div>
         <div class="savings-chart" data-reveal>
-          <div class="savings-bars">
+          <div class="savings-bars" id="savings-bars">
             ${bars}
           </div>
           <p class="savings-note">${s.note}</p>
@@ -54,4 +55,34 @@ export function renderSavingsSection(home) {
       </div>
     </section>
   `
+}
+
+export function bindSavingsSection() {
+  const container = document.getElementById('savings-bars')
+  if (!container) return
+
+  const fills = container.querySelectorAll('.savings-bar-fill')
+
+  if (!('IntersectionObserver' in window)) {
+    fills.forEach((fill) => {
+      fill.style.width = `${fill.dataset.targetWidth}%`
+    })
+    return
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return
+        fills.forEach((fill, i) => {
+          setTimeout(() => {
+            fill.style.width = `${fill.dataset.targetWidth}%`
+          }, i * 200)
+        })
+        observer.disconnect()
+      })
+    },
+    { threshold: 0.4 }
+  )
+  observer.observe(container)
 }

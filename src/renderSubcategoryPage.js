@@ -1,7 +1,7 @@
 import { renderHeader, bindHeader } from './components/header.js'
 import { renderBreadcrumb } from './components/breadcrumb.js'
 import { renderModelsGrid } from './components/hub/modelsGrid.js'
-import { renderSavingsSection } from './components/home/savingsChart.js'
+import { renderSavingsSection, bindSavingsSection } from './components/home/savingsChart.js'
 import { renderShowroomSection } from './components/home/showroomSection.js'
 import { renderFinalCtaHome } from './components/home/finalCtaHome.js'
 import { renderFooter } from './components/footer.js'
@@ -23,6 +23,7 @@ export function renderSubcategoryPage(sub) {
   ].join('')
 
   bindHeader()
+  bindSavingsSection()
   bindInquiryModal({ name: sub.intro.headline })
 
   initScrollReveal()

@@ -2,7 +2,7 @@ import { renderHeader, bindHeader } from './components/header.js'
 import { renderHeroHome, bindHeroHome } from './components/home/heroHome.js'
 import { renderTypesGrid } from './components/hub/typesGrid.js'
 import { renderModelsGrid } from './components/hub/modelsGrid.js'
-import { renderSavingsSection } from './components/home/savingsChart.js'
+import { renderSavingsSection, bindSavingsSection } from './components/home/savingsChart.js'
 import { renderShowroomSection } from './components/home/showroomSection.js'
 import { renderBlogSection } from './components/home/blogSection.js'
 import { renderFinalCtaHome } from './components/home/finalCtaHome.js'
@@ -28,6 +28,7 @@ export function renderCategoryHub(hub) {
 
   bindHeader()
   bindHeroHome()
+  bindSavingsSection()
   bindInquiryModal({ name: hub.hero.title })
 
   initScrollReveal()

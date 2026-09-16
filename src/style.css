@@ -252,7 +252,9 @@ p {
   border-bottom-color: var(--border);
 }
 .site-header--transparent:not(.is-scrolled) {
-  background: linear-gradient(180deg, rgba(10, 10, 8, 0.5) 0%, rgba(10, 10, 8, 0) 100%);
+  background: rgba(8, 8, 7, 0.55);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 .site-header--transparent:not(.is-scrolled) .site-logo,
 .site-header--transparent:not(.is-scrolled) .site-nav:not(.is-open) a,
@@ -1987,4 +1989,57 @@ p {
   line-height: 1.6;
   color: var(--text-secondary);
   max-width: 60ch;
+}
+
+/* Sticky in-page section nav (homepage) */
+#reseni, #uspora, #showroom, #blog, #kontakt {
+  scroll-margin-top: 150px;
+}
+.section-nav {
+  position: fixed;
+  top: 68px;
+  left: 0;
+  right: 0;
+  z-index: 90;
+  background: rgba(247, 247, 245, 0.82);
+  backdrop-filter: blur(14px) saturate(1.4);
+  -webkit-backdrop-filter: blur(14px) saturate(1.4);
+  border-bottom: 1px solid var(--border);
+  opacity: 0;
+  transform: translateY(-8px);
+  pointer-events: none;
+  transition: opacity 0.3s var(--ease), transform 0.3s var(--ease);
+}
+.section-nav.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.section-nav-inner {
+  display: flex;
+  gap: clamp(16px, 2vw, 28px);
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+.section-nav-inner::-webkit-scrollbar {
+  display: none;
+}
+.section-nav-link {
+  flex: none;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  padding: 6px 4px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+.section-nav-link:hover {
+  color: var(--text);
+}
+.section-nav-link.is-active {
+  color: var(--text);
+  border-bottom-color: var(--accent);
 }
