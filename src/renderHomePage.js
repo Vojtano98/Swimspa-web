@@ -17,11 +17,11 @@ export function renderHomePage(home) {
   const app = document.getElementById('app')
 
   app.innerHTML = [
-    renderHeader(),
+    renderHeader({ transparent: true }),
     renderHeroHome(home),
     renderCategorySplit(home),
-    renderAdvantagesSplit(home),
     renderSavingsSection(home),
+    renderAdvantagesSplit(home),
     renderShowroomSection(home),
     renderWhyStatements(home),
     renderBlogSection(home),

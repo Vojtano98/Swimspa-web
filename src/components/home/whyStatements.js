@@ -19,7 +19,7 @@ export function renderWhyStatements(home) {
     .join('')
 
   return `
-    <section class="section section--white">
+    <section class="section section--tint">
       <div class="container">
         <div class="section-head" data-reveal>
           <span class="eyebrow">${w.eyebrow}</span>

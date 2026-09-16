@@ -17,8 +17,9 @@ export function renderFooter() {
             </div>
             <div class="footer-col">
               <div class="footer-col-title">Kontakt</div>
-              <a href="tel:+420000000000">+420 000 000 000</a>
+              <a href="tel:+420777605789">+420 777 605 789</a>
               <a href="mailto:info@swimspa.cz">info@swimspa.cz</a>
+              <span class="footer-address">Nad Vršovskou horou 88/4<br />101 00 Praha 10 – Michle</span>
             </div>
             <div class="footer-col">
               <div class="footer-col-title">Sociální sítě</div>
@@ -28,7 +29,7 @@ export function renderFooter() {
           </div>
         </div>
         <div class="footer-bottom">
-          <span>&copy; ${year} SwimSpa.cz</span>
+          <span>&copy; ${year} SwimSpa.cz · NO TRADING s.r.o. · IČO 05295823</span>
           <div class="footer-legal">
             <a href="#">Obchodní podmínky</a>
             <a href="#">Ochrana osobních údajů</a>

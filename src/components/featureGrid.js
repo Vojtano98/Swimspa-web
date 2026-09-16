@@ -1,9 +1,10 @@
 export function renderFeatureGrid(product) {
   const b = product.benefits
   const images = product.images.feature
+  const tone = b.sectionTone || 'white'
 
   return `
-    <section class="section section--white">
+    <section class="section section--${tone}">
       <div class="container">
         <div class="section-head" data-reveal>
           <h2 class="h-section">${b.headline}</h2>

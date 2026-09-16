@@ -15,7 +15,7 @@ export function renderCategoryHub(hub) {
   const app = document.getElementById('app')
 
   app.innerHTML = [
-    renderHeader(),
+    renderHeader({ transparent: true }),
     renderHeroHome(hub),
     renderTypesGrid(hub),
     renderModelsGrid(hub),

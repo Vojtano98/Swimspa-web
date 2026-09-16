@@ -23,7 +23,7 @@ export function renderAdvantagesSplit(home) {
     .join('')
 
   return `
-    <section class="section section--white" id="reseni">
+    <section class="section section--tint" id="reseni">
       <div class="container">
         <div class="section-head" data-reveal>
           <span class="eyebrow">${a.eyebrow}</span>

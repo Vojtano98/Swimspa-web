@@ -22,7 +22,7 @@ export function renderProductPage(product) {
   const app = document.getElementById('app')
 
   app.innerHTML = [
-    renderHeader(),
+    renderHeader({ transparent: true }),
     renderProductHero(product),
     renderVariantSelector(product),
     renderQuickSpecs(product),

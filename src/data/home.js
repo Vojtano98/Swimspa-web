@@ -94,7 +94,7 @@ export const home = {
         eyebrow: 'ZDRAVÍ A REGENERACE',
         claim: 'Hydroterapie, kterou pocítíte každý den.',
         text: 'Teplá voda a cílená hydromasáž uvolňují svaly, zlepšují krevní oběh a pomáhají tělu i mysli zregenerovat po náročném dni.',
-        image: '/assets/products/crown-summit/hot-zones.jpg',
+        image: '/assets/products/crown-summit/regal-whitewater-jet.jpg',
         layout: 'image-left',
       },
       {
@@ -108,7 +108,7 @@ export const home = {
         eyebrow: 'ČAS S RODINOU I PŘÁTELI',
         claim: 'Místo, kam se budete rádi vracet.',
         text: 'Od rychlého osvěžení po ránu až po večer u sklenky vína s přáteli — swim spa i vířivka se stanou přirozeným středem vaší zahrady.',
-        image: img('photo-1613977257363-707ba9348227', 2000),
+        image: '/assets/products/crown-summit/bluetooth-audio.jpg',
         layout: 'image-left',
       },
     ],
@@ -116,6 +116,7 @@ export const home = {
 
   benefits: {
     headline: 'Proč zvolit SwimSpa.cz',
+    sectionTone: 'tint',
     hero: {
       label: 'Odborné poradenství',
       text: 'Pomůžeme s výběrem modelu, umístěním i technickou přípravou — od první konzultace až po instalaci.',

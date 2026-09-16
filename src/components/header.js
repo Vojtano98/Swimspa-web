@@ -1,6 +1,6 @@
-export function renderHeader() {
+export function renderHeader({ transparent = false } = {}) {
   return `
-    <header class="site-header" id="site-header">
+    <header class="site-header${transparent ? ' site-header--transparent' : ''}" id="site-header">
       <div class="container">
         <a href="/" class="site-logo">SWIMSPA</a>
         <nav>
@@ -9,11 +9,11 @@ export function renderHeader() {
             <li><a href="/virivky/" data-nav-link>Vířivky</a></li>
             <li><a href="#" data-nav-link>Realizace</a></li>
             <li><a href="#technologie" data-nav-link>Technologie</a></li>
-            <li><a href="#" data-nav-link>O nás</a></li>
+            <li><a href="/#showroom" data-nav-link>Kontakt</a></li>
           </ul>
         </nav>
         <div class="header-actions">
-          <a href="tel:+420000000000" class="header-contact">+420 000 000 000</a>
+          <a href="tel:+420777605789" class="header-contact">+420 777 605 789</a>
           <button class="btn btn-primary header-cta" data-open-inquiry>Spočítat cenu</button>
           <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span></button>
         </div>
