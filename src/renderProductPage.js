@@ -17,6 +17,7 @@ import { renderMobileStickyCTA, bindMobileStickyCTA } from './components/mobileS
 import { bindInquiryModal } from './components/inquiryModal.js'
 
 import { initScrollReveal } from './utils/reveal.js'
+import { applyBasePath } from './utils/basePath.js'
 
 export function renderProductPage(product) {
   const app = document.getElementById('app')
@@ -39,6 +40,8 @@ export function renderProductPage(product) {
     renderFooter(),
     renderMobileStickyCTA(product),
   ].join('')
+
+  applyBasePath(app)
 
   bindHeader()
   bindProductHero()

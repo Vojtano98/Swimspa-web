@@ -10,6 +10,7 @@ import { renderFooter } from './components/footer.js'
 import { bindInquiryModal } from './components/inquiryModal.js'
 
 import { initScrollReveal } from './utils/reveal.js'
+import { applyBasePath } from './utils/basePath.js'
 
 export function renderCategoryHub(hub) {
   const app = document.getElementById('app')
@@ -25,6 +26,8 @@ export function renderCategoryHub(hub) {
     renderFinalCtaHome(hub),
     renderFooter(),
   ].join('')
+
+  applyBasePath(app)
 
   bindHeader()
   bindHeroHome()

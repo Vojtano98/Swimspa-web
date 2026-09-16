@@ -1,9 +1,10 @@
 import { resolve } from 'node:path'
 import { defineConfig } from 'vite'
 
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   root: 'src',
   publicDir: '../public',
+  base: mode === 'ghpages' ? '/Swimspa-web/' : '/',
   build: {
     outDir: '../dist',
     emptyOutDir: true,
@@ -27,4 +28,4 @@ export default defineConfig({
       },
     },
   },
-})
+}))
