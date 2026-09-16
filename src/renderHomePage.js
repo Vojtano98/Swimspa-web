@@ -25,8 +25,8 @@ export function renderHomePage(home) {
     renderSavingsSection(home),
     renderWhyStatements(home),
     renderShowroomSection(home),
-    renderBlogSection(home),
     renderFeatureGrid(home),
+    renderBlogSection(home),
     renderFinalCtaHome(home),
     renderFooter(),
   ].join('')
